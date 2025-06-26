@@ -8,20 +8,27 @@
     <script src="javascript.js" defer></script>
   </head>
   <body>
+    <!-- <button
+      class="button"
+      onclick="document.body.style.backgroundImage = 'url(./images/clubhouse.jpg)'"
+    >
+      Background
+    </button> -->
     <div class="card">
       <a id="emptyblock1"></a>
-      <a href="#emptyblock2" class="button1 button">Click me</a>
-
+      <a
+        href="#emptyblock2"
+        class="button1 button"
+        onclick="document.body.style.backgroundImage = 'url(./images/background.jpg)'"
+        >Click me</a
+      >
       <a id="emptyblock2"></a>
       <a href="#emptyblock3" class="button2 button">Over here!</a>
-
       <a id="emptyblock3"></a>
       <a href="#emptyblock4" class="button3 button">Wooops</a>
-
       <a id="emptyblock4"></a>
       <a class="button4 button" onclick="oppgave4()">console.log(oppgave4)</a>
-
-      <a class="reset button" href="#emptyblock1">Reset</a>
+      <a class="reset button" href="" onclick="reset()">Reset</a>
     </div>
   </body>
 </html>

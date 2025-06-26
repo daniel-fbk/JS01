@@ -113,10 +113,16 @@ function oppgave4() {
 
   if (userName != "" && userAge >= 18 && userIsBlocked == false) {
     userIsLoggedIn = true;
-    goToPage = "/home";
+    goToPage = "index.html";
     console.log("Everything is true.");
   } else {
     console.log("It is not true.");
+  }
+}
+
+function reset() {
+  if (userIsLoggedIn === true) {
+    window.location.href = goToPage;
   }
 }
 

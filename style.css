@@ -8,15 +8,16 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-image: url(./images/clubhouse.jpg);
   background-size: cover;
-  background-position: center;
   transition: background-image 500ms ease;
+  background-repeat: no-repeat;
 }
 
 .card {
-  margin-top: 250px;
   height: 400px;
   width: 600px;
   border-radius: 1rem;
@@ -109,7 +110,8 @@ a.button3 {
 
 body:has(:target) .card {
   transition: 1000ms ease;
-  scale: 1.5;
+  height: 700px;
+  width: 1000px;
 }
 
 body:not(:has(:target)) .button1,
@@ -137,4 +139,30 @@ body:not(:has(:target)) .button1,
 }
 #emptyblock4:target ~ .button3 {
   display: none;
+}
+
+.welcome-text {
+  font-size: 100px;
+  color: rgb(243, 147, 2);
+}
+
+body:not(:has(:target)) .warning-text {
+  display: none;
+}
+
+body:has(:target) .welcome-text {
+  display: none;
+}
+
+.warning-text {
+  color: firebrick;
+  font-size: 100px;
+  animation: blinker 1000ms linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.8;
+    scale: 1.2;
+  }
 }
